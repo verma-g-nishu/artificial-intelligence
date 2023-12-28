@@ -1,0 +1,44 @@
+:root {
+    --bodybg: #f0f2f6;
+    --txt-white: #fff;
+    --txt-black: #000;
+    --primary-color: #2b3892;
+    --border-color: #e1e5eb;
+    --sidebar-bg: #fff;
+    --sidebar-hover: #f0f2f6;
+    --card-bg: #fff;
+
+
+    //harpreet
+    --btn-hover: #404eb1;
+    --link-bg: #1f1f2163;
+
+    //nishu
+    --light-blue: #31bafd1f;
+    --border-color: #d1d1d263;
+    --txt-light: #9d9d9d;
+    --sky-blue: #31bafd;
+}
+
+
+
+body[data-theme='light'] {
+    --bodybg: #f0f2f6;
+    --txt-white: #fff;
+    --txt-black: #000;
+    --primary-color: #2b3892;
+    --border-color: #e1e5eb;
+    --sidebar-bg: #fff;
+    --card-bg: #fff;
+    --sidebar-hover: #f0f2f6;
+
+    //harpreet
+    --btn-hover: #404eb1;
+    --link-bg: #1f1f2163;
+
+    //nishu
+    --light-blue: #31bafd1f;
+    --border-color: #d1d1d263;
+    --txt-light: #9d9d9d;
+    --sky-blue: #31bafd;
+}

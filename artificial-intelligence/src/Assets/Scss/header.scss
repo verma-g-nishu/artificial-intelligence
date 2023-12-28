@@ -1,0 +1,312 @@
+.app-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 10;
+    padding: 15px 0px 14px 320px;
+    background: var(--card-bg);
+    box-shadow: 16px 0px 16px rgba(24, 23, 38, 0.06);
+    padding-right: 20px !important;
+    display: flex;
+    justify-content: space-between;
+
+
+    @media ($breakpoint_LG) {
+        justify-content: space-between;
+        padding: 15px 0px 14px 0px;
+    }
+
+    .right-header-sec {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+
+        .icons_im {
+            input {
+                border: none;
+            }
+
+            img {
+                width: 38px;
+            }
+        }
+
+        .ring-icon {
+            margin-right: 10px;
+        }
+
+        .log-btn {
+            border-radius: 10px;
+            background: var(--primary-color);
+            padding: 4px 12px;
+            color: var(--txt-white);
+            font-size: 16px;
+            border: none;
+        }
+    }
+}
+
+.for_toggle_scan {
+    @media ($breakpoint_LG) {
+        display: flex;
+        gap: 10px;
+    }
+
+    .app-sidebar__toggle {
+        -webkit-transition: background-color 0.3s ease;
+        -o-transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease;
+        z-index: 1;
+        margin-left: 20px;
+        display: none;
+
+        img {
+            width: 54px;
+            display: none;
+
+            @media ($breakpoint_LG) {
+                display: block;
+            }
+        }
+
+        @media($breakpoint_LG) {
+            display: flex;
+
+        }
+
+        svg {
+            fill: var(--primary-color);
+            height: 30px;
+            width: 30px;
+        }
+
+        &:focus {
+            text-decoration: none;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+
+
+    }
+
+
+    .header-left {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media ($breakpoint_MD) {
+            display: none;
+        }
+
+        p {
+            font-size: 14px;
+            margin-bottom: 0px;
+            background: var(--bodybg);
+            padding: 10px;
+            border-radius: 5px;
+            // width: 80%;
+            border: none;
+            margin-right: 10px;
+        }
+
+        .scan_code {
+            width: 38px;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+        }
+
+        .icons_im {
+            display: flex;
+
+            svg {
+                font-size: 38px;
+                color: var(--primary-color);
+                margin-left: 10px;
+            }
+        }
+    }
+
+
+}
+
+@keyframes customEnterModalAnimation {
+    0% {
+        transform: translateX(-$sidebar_width);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+
+@keyframes customLeaveModalAnimation {
+    0% {
+        transform: translateX(0);
+
+    }
+
+    100% {
+        transform: translateX(-$sidebar_width);
+    }
+}
+
+.new_modal_sidebar {
+    height: 100vh;
+    background-color: var(--card-bg) !important;
+    position: fixed !important;
+    top: 0;
+    left: 0px !important;
+    width: $sidebar_width;
+    margin: 0px !important;
+    transition: 0.5s;
+    z-index: 12;
+    overflow: auto;
+
+    @media($breakpoint_ESM) {
+        width: 260px;
+    }
+
+    .responsive_sidebar {
+        .sidebar {
+            padding: 15px 0px 15px 15px;
+
+            .sidebar_menu {
+                margin-bottom: 0;
+                padding: 12px 0;
+
+                .accordion {
+                    .accordion-item {
+                        margin: 10px 0px;
+                        border: none;
+
+                        .accordion-header {
+                            .accordion-button {
+                                padding: 0px;
+                                background-color: transparent;
+                                box-shadow: none;
+
+                                a,
+                                span {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                    text-decoration: none;
+                                    width: 100%;
+                                    padding: 15px 15px;
+                                    color: var(--txt-black);
+                                    font-size: 15px;
+                                    font-weight: 500;
+
+                                    svg {
+                                        color: var(--txt-black);
+                                        font-size: 20px;
+                                    }
+                                }
+
+                                .drop_link {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                    text-decoration: none;
+                                    width: 100%;
+                                    padding: 15px 15px;
+                                    color: var(--txt-white);
+                                    font-size: 15px;
+                                    font-weight: 500;
+
+                                    svg {
+                                        color: var(--txt-white);
+                                        font-size: 20px;
+                                    }
+                                }
+
+                                .active_Link {
+                                    background-color: var(--primary-color);
+                                    border-radius: 50px 0px 0px 50px;
+                                }
+
+                                &:hover {
+                                    background-color: var(--sidebar-hover);
+                                    border-radius: 50px 0px 0px 50px;
+                                }
+
+                                &::after {
+                                    margin-right: 15px;
+                                }
+                            }
+                        }
+
+                        .only_button {
+                            .accordion-button {
+                                padding: 0px;
+
+                                &::after {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        .accordion-body {
+                            padding: 10px;
+
+                            ul {
+                                padding-left: 0px;
+                                list-style: none;
+
+                                li {
+                                    margin: 5px 0px;
+
+                                    a {
+                                        background-color: transparent;
+                                        width: 100%;
+                                        display: flex;
+                                        padding: 10px;
+                                        color: var(--txt-black);
+                                        font-size: 14px;
+                                        border-radius: 4px;
+                                        font-weight: 500;
+                                        opacity: .7;
+
+                                        &:hover {
+                                            // background-color: var(--sidebar-hover);
+                                            color: var(--primary-color);
+
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .react-responsive-modal-closeButton {
+        top: 8px;
+        position: absolute;
+        right: 8px;
+        background-color: transparent;
+        border: none;
+
+        &:focus-visible {
+            outline: none !important;
+        }
+
+        svg {
+            fill: var(--txt-black);
+        }
+    }
+
+}

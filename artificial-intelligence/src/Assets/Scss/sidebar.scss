@@ -1,0 +1,173 @@
+.app-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    color: #8a98ac;
+    width: 280px;
+    height: 100%;
+    z-index: 11;
+    background: var(--sidebar-bg);
+    -webkit-box-shadow: 0px 22px 0 21px #f1f4fb;
+    box-shadow: -8px 12px 18px 0 #f1f4fb;
+    border-right: 1px solid #eff0f6;
+    -webkit-transition: left 0.3s ease, width 0.3s ease;
+    -o-transition: left 0.3s ease, width 0.3s ease;
+    transition: left 0.3s ease, width 0.3s ease;
+    border-right: 0;
+    border-top-right-radius: 70px;
+    overflow-y: auto;
+   
+    @media($breakpoint_LG){
+        display: none;
+    }
+
+    .app-sidebar__logo {
+        padding: 15px 15px;
+        border-bottom: 1px solid var(--border-color);
+        text-align: center;
+        width: 280px;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        z-index: 999;
+        background: var(--sidebar-bg);
+        border-top-right-radius: 70px;
+        -webkit-transition: left 0.3s ease, width 0.3s ease;
+        -o-transition: left 0.3s ease, width 0.3s ease;
+        transition: left 0.3s ease, width 0.3s ease;
+        flex-shrink: 0;
+        align-items: center;
+
+        .header-brand {
+            .header-brand-img {
+                height: 40px;
+                vertical-align: bottom;
+                margin-right: 0;
+                width: auto
+            }
+        }
+    }
+
+    .app-sidebar3 {
+        padding-top: 50px;
+
+        .sidebar {
+            padding: 15px 0px 15px 15px;
+
+            .sidebar_menu {
+                margin-bottom: 0;
+                padding: 12px 0;
+
+                .accordion {
+                    .accordion-item {
+                        margin: 10px 0px;
+                        border: none;
+
+                        .accordion-header {
+                            .accordion-button {
+                                padding: 0px;
+                                background-color: transparent;
+                                box-shadow: none;
+
+                                a,
+                                span {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                    text-decoration: none;
+                                    width: 100%;
+                                    padding: 15px 15px;
+                                    color: var(--txt-black);
+                                    font-size: 15px;
+                                    font-weight: 500;
+
+                                    svg {
+                                        color: var(--txt-black);
+                                        font-size: 20px;
+                                    }
+                                }
+
+                                .drop_link{
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                    text-decoration: none;
+                                    width: 100%;
+                                    padding: 15px 15px;
+                                    color: var(--txt-white);
+                                    font-size: 15px;
+                                    font-weight: 500;
+
+                                    svg {
+                                        color: var(--txt-white);
+                                        font-size: 20px;
+                                    }
+                                }
+
+                                .active_Link{
+                                    background-color: var(--primary-color);
+                                    border-radius: 50px 0px 0px 50px;
+                                }
+
+                                &:hover{
+                                    background-color: var(--sidebar-hover);
+                                    border-radius: 50px 0px 0px 50px;
+                                }
+
+                                &::after {
+                                   margin-right: 15px;
+                                }
+                            }
+                        }
+
+                        .only_button {
+                            .accordion-button {
+                                padding: 0px;
+
+                                &::after {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        .accordion-body {
+                            padding: 10px;
+
+                            ul {
+                                padding-left: 0px;
+                                list-style: none;
+
+                                li {
+                                    margin: 5px 0px;
+
+                                    a {
+                                        background-color: transparent;
+                                        width: 100%;
+                                        display: flex;
+                                        padding: 10px;
+                                        color: var(--txt-black);
+                                        font-size: 14px;
+                                        border-radius: 4px;
+                                        font-weight: 500;
+                                        opacity: .7;
+
+                                        &:hover {
+                                            // background-color: var(--sidebar-hover);
+                                            color: var(--primary-color);
+                                            
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}

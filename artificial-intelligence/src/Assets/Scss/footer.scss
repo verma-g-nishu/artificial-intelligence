@@ -1,0 +1,29 @@
+.footer {
+    padding: 1.25rem 1.25rem 1.25rem 280px;
+    background: 0 0;
+    border-top: 1px solid var(--border-color);
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    background: var(--txt-white);
+
+    @media($breakpoint_LG) {
+        padding: 0px;
+    }
+
+
+    p {
+        margin-bottom: 0px;
+        font-size: 15px;
+        color: var(--txt-black);
+
+        @media($breakpoint_ESM) {
+            font-size: 15px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+    }
+}

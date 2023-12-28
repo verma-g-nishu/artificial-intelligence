@@ -1,0 +1,701 @@
+.main_inner_sec {
+
+    .banner-section-top {
+
+        border-radius: 10px;
+        margin-top: 30px;
+
+        .banner-img {
+            border-radius: 10px;
+            width: 100%;
+        }
+
+    }
+
+    .cards_row {
+        padding: 30px 0px 0px 0px;
+
+        .card_inner {
+
+            border: none;
+
+            border-radius: 10px;
+            margin-bottom: 15px;
+
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+
+
+            }
+
+            .card-body {
+                display: flex;
+                justify-content: space-evenly;
+
+                .card-text {
+                    font-weight: 600;
+                    font-size: 16px;
+
+                }
+
+                .card-title {
+                    transition: all 0.4s linear;
+                    color: var(--txt-light);
+                }
+            }
+
+            img {
+                transition: all 0.4s linear;
+                width: 65px;
+                background: white;
+                border-radius: 50%;
+                border: 1px dotted var(--primary-color);
+                padding: 5px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                height: 8px;
+                transform: rotate(90deg);
+                width: 26%;
+                top: 46%;
+                left: -11%;
+                background: var(--primary-color);
+                border-radius: 16px 16px 0px 0px;
+
+                @media ($breakpoint_SM) {
+                    width: 71px;
+                    top: 46%;
+                    left: -30px;
+                }
+            }
+        }
+    }
+
+    .profit_cards {
+        padding: 30px 0px 0px 0px;
+
+
+
+        .card_1 {
+            background: var(--primary-color);
+
+            .card-title {
+                color: var(--sky-blue);
+            }
+
+            h6 {
+                color: var(--sky-blue);
+            }
+
+            .icon_profit {
+                img {
+                    background: var(--txt-white) !important;
+                }
+            }
+        }
+
+        .card_2 {
+            position: relative;
+            z-index: 1;
+
+            &::after {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background: url(../Image/card_bg_new.png);
+                z-index: -1;
+                opacity: 0.3;
+                right: 0;
+                border-radius: 10px;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .icon_profit {
+                img {
+                    background: var(--primary-color) !important;
+                }
+            }
+        }
+
+        .card_3 {
+            position: relative;
+            z-index: 1;
+
+            &::after {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background: url(../Image/card_bg_new.png);
+                z-index: -1;
+                opacity: 0.3;
+                right: 0;
+                border-radius: 10px;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .icon_profit {
+                img {
+                    background: var(--primary-color) !important;
+                }
+            }
+        }
+
+        .card_4 {
+            position: relative;
+            z-index: 1;
+
+            &::after {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background: url(../Image/card_bg_new.png);
+                z-index: -1;
+                opacity: 0.3;
+                right: 0;
+                border-radius: 10px;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .icon_profit {
+                img {
+                    background: var(--primary-color) !important;
+                }
+            }
+        }
+
+        .profit_inner_card {
+            margin-bottom: 15px;
+            position: relative;
+            z-index: -3;
+            border: none;
+
+            .card-body {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+                align-items: center;
+
+                .icon_profit {
+                    // padding: 20px;
+
+                    .profit {
+                        width: 54px;
+                        padding: 10px;
+                        border-radius: 5px;
+                        background: var(--light-blue);
+                    }
+
+                    &::after {
+
+                        content: "";
+                        position: absolute;
+                        height: 50px;
+                        width: 50px;
+                        right: 3%;
+                        top: 36%;
+                        /* clip-path: polygon(50% 10%, 100% 0%, 100% 100%, 0% 100%, 0% 0%); */
+                        /* border-bottom: 5px solid #2b3892; */
+                        background-color: #31bafd;
+                        border-radius: 5px;
+                        z-index: -1;
+                    }
+                }
+
+                .card_data {
+                    .card-text {
+                        color: var(--txt-light);
+                    }
+
+                }
+
+            }
+        }
+
+        .total_limit {
+            border: none;
+
+            .card-body {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                p {
+                    width: 70%;
+                    border: none;
+                    background: var(--bodybg);
+                    border-radius: 5px;
+                    padding: 7px 10px;
+                    margin: 0;
+                }
+
+                h6 {
+                    color: var(--sky-blue);
+                }
+
+            }
+        }
+
+        .card_inner {
+            border: none;
+            margin-bottom: 15px;
+            background: var(--light-blue);
+
+            .card-body {
+                .data {
+                    font-size: 12px;
+                }
+
+                .profit_head {
+                    display: flex;
+                    justify-content: space-between;
+                    color: var(--primary-color);
+                }
+
+                .trade_head {
+                    display: flex;
+                    justify-content: space-between;
+                    background: var(--txt-white);
+                    padding: 10px;
+                    border-radius: 10px;
+                    margin: 10px 0px;
+                    align-items: center;
+                    color: var(--txt-light);
+
+                    h6 {
+                        margin-bottom: 0px;
+                    }
+
+                    .arrow_up {
+                        color: green;
+                    }
+
+                    .amount {
+                        color: green;
+                        margin-right: 8px;
+                    }
+
+                    .arrow_down {
+                        color: red;
+                    }
+
+                    .amount_new {
+                        color: red;
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    .rank_royality {
+        background: var(--txt-white);
+        padding: 20px;
+        border-radius: 5px;
+        margin: 30px 0px 0px 0px;
+
+        h4 {
+            margin-bottom: 10px;
+            color: var(--sky-blue);
+        }
+
+        .rank_card {
+
+
+            border-left: 8px double #7dc0eb;
+            color: var(--txt-white);
+            background: var(--primary-color);
+
+            border-right: 8px double #7dc0eb;
+
+            .card-body {
+                display: flex;
+
+                .executive_icon {
+                    img {
+                        width: 65px;
+                        margin-right: 15px;
+                        background: var(--txt-white);
+                        padding: 10px;
+                        border-radius: 16px 0px 16px 16px;
+                    }
+                }
+            }
+        }
+
+        .right_rank_sec {
+            @media ($breakpoint_LG) {
+                margin-top: 20px;
+            }
+
+            .card {
+                border: 1px solid var(--border-color);
+                background: var(--light-blue);
+
+                @media ($breakpoint_LG) {
+                    margin-bottom: 20px;
+                }
+
+                .rank_amount {
+                    display: flex;
+                    justify-content: space-between;
+                    background: var(--primary-color);
+                    padding: 10px;
+                    border: 1px solid var(--bodybg);
+                    border-radius: 10px;
+                    color: var(--txt-white);
+                    margin: 5px 0px 25px 0px;
+
+                    h6 {
+                        margin: 0px;
+                    }
+                }
+            }
+
+            .progress_sec {
+
+
+                .progress {
+                    margin: 5px 0px;
+                    height: 20px;
+                }
+            }
+
+            .rule {
+                p {
+                    text-align: center;
+                    background: var(--txt-white);
+                    padding: 5px;
+                    border-radius: 10px;
+                    margin: 40px 0px 10px 0px;
+                    color: var(--sky-blue);
+                }
+            }
+
+            .inner_data_values {
+                h6 {
+                    font-size: 14px;
+                    margin-top: 10px;
+                }
+
+                .item-sec {
+                    display: flex;
+                    justify-content: space-between;
+                    background: var(--txt-white);
+                    border-radius: 5px;
+                    align-items: center;
+                    padding: 5px 10px;
+                    margin: 10px 0px 0px 0px;
+                    color: var(--txt-light);
+
+                    p {
+                        margin: 0px;
+
+                    }
+                }
+            }
+        }
+
+    }
+
+    .portfolio_sec {
+        padding: 30px 0px 0px 0px;
+
+        .scan_card {
+            min-height: 83px;
+            border: none;
+
+            @media ($breakpoint_LG) {
+                margin-bottom: 20px;
+            }
+
+            .card-body {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+
+                input {
+                    font-size: 14px;
+                    margin-bottom: 0px;
+                    background: var(--bodybg);
+                    padding: 10px;
+                    border-radius: 5px;
+                    width: 80%;
+                    border: none;
+                }
+
+                .scan_code {
+                    width: 38px;
+                    border: 1px solid var(--primary-color);
+                    border-radius: 5px;
+                }
+
+                .icons_im {
+
+
+                    svg {
+                        font-size: 38px;
+                        color: var(--primary-color);
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+        .rank_card {
+            border: none;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                height: 8px;
+                transform: rotate(90deg);
+                width: 26%;
+                top: 46%;
+                left: -11%;
+                background: var(--primary-color);
+                border-radius: 16px 16px 0px 0px;
+
+                @media ($breakpoint_LG) {
+                    width: 71px;
+                    top: 46%;
+                    left: -30px;
+                }
+            }
+
+            .card-body {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+                align-items: center;
+
+                .current_rank {
+                    .card-text {
+                        color: var(--sky-blue);
+                    }
+                }
+
+                img {
+                    background: var(--light-blue);
+                    padding: 8px;
+                    border-radius: 10px;
+                    width: 38px;
+                }
+            }
+        }
+    }
+
+    .performance_cards {
+        padding: 30px 0px 0px 0px;
+
+        .left_card {
+
+            position: relative;
+            z-index: -3;
+            border-left: 2px solid var(--primary-color) !important;
+            border: none;
+
+            // &::after {
+            //     content: "";
+            //     position: absolute;
+            //     height: 100%;
+
+            //     width: 100%;
+            //     background-image: url(../Image/profit.png);
+            //     z-index: -1;
+            //     border-radius: 6px;
+            //     background-size: contain;
+            //     background-position: right;
+            //     opacity: 0.2;
+            //     background-repeat: no-repeat;
+
+            // }
+
+            .card-body {
+                h5 {
+                    color: var(--primary-color);
+                    margin-bottom: 15px;
+                }
+
+                .list_sec {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .percentage {
+                        background: var(--light-blue);
+                        padding: 5px;
+                        border-radius: 5px;
+                    }
+
+                    p {
+                        svg {
+                            color: var(--txt-white);
+                            padding: 5px;
+                            background: var(--primary-color);
+                            border-radius: 5px;
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right_sec {
+            border-left: 2px solid var(--primary-color) !important;
+            border: none;
+
+            .card-body {
+                h5 {
+                    color: var(--primary-color);
+                }
+
+                .inner_img_sec {
+                    padding: 17px 0px;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+
+                    .img_icons {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+
+                        img {
+                            width: 38px;
+                            padding: 5px;
+                        }
+
+                        p {
+                            margin: 0px;
+                        }
+                    }
+                }
+
+                .profit_month {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px;
+                    background: var(--bodybg);
+                    border-radius: 5px;
+
+                    p {
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    .chart_sections {
+        padding: 30px 0px 0px 0px;
+
+        .chart_style {
+            background-color: var(--bodybg);
+        }
+    }
+
+    .table_section {
+        padding: 30px 0px 0px 0px;
+
+        .scrolling_table {
+            overflow-x: scroll;
+            overflow-y: scroll;
+
+            .scroll_under {
+                width: 100%;
+                height: 306px;
+
+                .support_table {
+                    border-collapse: separate;
+                    border-spacing: 0 0px;
+
+                    thead {
+                        background: var(--primary-color);
+                        position: sticky;
+                        top: 0;
+                        z-index: 1;
+
+                        .table_heading_row {
+                            .table_heading {
+                                font-size: 16px;
+                                font-weight: 600;
+                                padding: 15px;
+                                background: none;
+                                color: var(--txt-white);
+                                white-space: nowrap;
+
+                                @media ($breakpoint_SM) {
+                                    padding: 7px;
+                                }
+
+                                &:first-child {
+                                    border-radius: 5px 0px 0px 5px;
+                                }
+
+                                &:last-child {
+                                    border-radius: 0px 5px 5px 0px;
+                                }
+                            }
+                        }
+                    }
+
+                    tbody {
+                        background: var(--txt-white);
+
+                        .table_data_row {
+                            transition: all 0.2s linear;
+                            border-bottom: var(--sky-blue);
+
+                            &:hover {
+                                background: var(--light-blue);
+                            }
+
+                            .table_data {
+                                padding: 15px;
+                                color: var(--txt-black);
+                                font-size: 17px;
+                                font-weight: 500;
+                                background: transparent;
+
+                                @media ($breakpoint_SM) {
+                                    padding: 7px;
+                                }
+
+                                // &:first-child {
+                                //     border-radius: 5px 0px 0px 5px;
+                                //   }
+                                // &:last-child{
+                                //   border-radius: 0px 5px 5px 0px;
+                                // }
+                                .pic_text {
+                                    display: flex;
+                                    gap: 10px;
+                                    color: var(--txt-black);
+
+                                    img {
+                                        width: 25px;
+                                    }
+                                }
+                            }
+
+                            .payment_fee {
+                                color: var(--primary-color);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

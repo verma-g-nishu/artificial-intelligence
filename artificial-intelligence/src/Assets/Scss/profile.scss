@@ -1,0 +1,159 @@
+.profile-section {
+  background-color: var(--txt-white);
+  padding: 25px 0;
+  border-radius: 10px;
+
+  .personal-info {
+    background-color: var(--bodybg);
+    padding: 40px 40px 20px 40px;
+    border-radius: 10px;
+    border-radius: 10px;
+
+    @media (max-width:992px) {
+      margin-bottom: 30px;
+    }
+
+    .my-info {
+      text-align: left;
+      font-size: 18px;
+      font-weight: 500;
+      border-bottom: 1px solid var(--txt-black);
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+
+      b {
+        background-color: var(--primary-color);
+        color: var(--txt-white);
+        border-radius: 10px 60px;
+        padding: 8px 16px;
+      }
+    }
+
+    .profile-infos {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .owner-pic {
+        margin-bottom: 30px;
+      }
+
+      .name-post {
+        h5 {
+          color: var(--txt-black);
+          font-size: 20px;
+          font-weight: 600;
+          margin: 0;
+        }
+
+        p {
+          color: var(--txt-black);
+          font-size: 15px;
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    .bio {
+      margin-bottom: 30px;
+
+      .from-label {
+        font-size: 14px;
+        margin: 0;
+      }
+    }
+
+    .form {
+      margin-bottom: 30px;
+    }
+
+    .form-label {
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+
+    .form-control {
+      font-size: 14px;
+      background: var(--txt-white);
+    }
+
+    .form-control:focus {
+      box-shadow: none;
+      border: none;
+    }
+
+    .foot-info {
+      margin: 45px 0 30px;
+
+      .down-btn {
+        padding: 8px 16px;
+        color: var(--txt-white);
+        background-color: var(--primary-color);
+        border: none;
+        outline: none;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .account-details {
+    background-color: var(--bodybg);
+    padding: 40px 40px 20px 40px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    height: 782px;
+
+    @media (max-width:768px) {
+      height: 100%;
+      padding: 40px 20px 20px 20px;
+    }
+
+    .account-head {
+      text-align: left;
+      font-size: 18px;
+      font-weight: 500;
+      border-bottom: 1px solid var(--txt-black);
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+
+      b {
+        background-color: var(--primary-color);
+        color: var(--txt-white);
+        border-radius: 10px 60px;
+        padding: 8px 16px;
+      }
+    }
+
+    .form {
+      margin-bottom: 30px;
+    }
+
+    .form-label {
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+
+    .form-control {
+      font-size: 14px;
+    }
+
+    .form-control:focus {
+      box-shadow: none;
+      border: none;
+    }
+
+    .account-foot {
+      text-align: end;
+      margin: 55px 0 30px;
+
+      .up-btn {
+        padding: 8px 16px;
+        color: var(--txt-white);
+        background-color: var(--primary-color);
+        border: none;
+        outline: none;
+        border-radius: 8px;
+      }
+    }
+  }
+}

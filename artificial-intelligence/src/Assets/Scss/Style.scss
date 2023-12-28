@@ -1,0 +1,13 @@
+// @import 'bootstrap/dist/css/bootstrap.min.css';
+@import '~bootstrap/scss/bootstrap';
+@import './_theme.scss'; // Only css variable ( color acc useing__ )...
+@import './Common.scss'; // Common scss ( breakpoints , mixin, common button , common list, common Heading size and much more )
+@import './sidebar.scss';
+@import './profile.scss';
+@import './deposit.scss';
+@import './login.scss';
+@import './header.scss';
+@import './footer.scss';
+@import './dashboard.scss';
+
+// ? Please Login and signUp more page ( New create new scss file then import_)
