@@ -1,5 +1,5 @@
 .footer {
-    padding: 1.25rem 1.25rem 1.25rem 280px;
+    padding: 1.5rem 1.25rem 1.5rem 280px;
     background: 0 0;
     border-top: 1px solid var(--border-color);
     position: relative;
@@ -7,9 +7,12 @@
     width: 100%;
     background: var(--txt-white);
 
-    @media($breakpoint_LG) {
-        padding: 0px;
+    @media ($breakpoint_XL) {
+        margin-top: 40px;
+        padding: 10px 10px 20px 10px;
     }
+
+
 
 
     p {

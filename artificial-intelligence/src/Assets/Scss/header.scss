@@ -1,30 +1,43 @@
 .app-header {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    // position: fixed;
+    // left: 0;
+    // right: 0;
+    // top: 0;
+    width: auto;
+    border-radius: 10px;
     display: flex;
     z-index: 10;
-    padding: 15px 0px 14px 320px;
-    background: var(--card-bg);
-    box-shadow: 16px 0px 16px rgba(24, 23, 38, 0.06);
+    padding: 15px;
+    margin: 20px 30px 0px 322px;
+    background: var(--txt-white);
+    // box-shadow: 16px 0px 16px rgba(24, 23, 38, 0.06);
     padding-right: 20px !important;
     display: flex;
     justify-content: space-between;
 
 
-    @media ($breakpoint_LG) {
+    @media ($breakpoint_XL) {
         justify-content: space-between;
         padding: 15px 0px 14px 0px;
+        margin: 0px;
+        border-radius: 0px;
     }
 
     .right-header-sec {
         display: flex;
         gap: 15px;
         align-items: center;
+
+        .log_button {
+            svg {
+                background: var(--txt-white);
+                color: var(--sky-blue);
+                padding: 4px;
+                border-radius: 50%;
+                margin-left: 11px;
+                font-size: 25px;
+            }
+        }
 
         .icons_im {
             input {
@@ -52,7 +65,7 @@
 }
 
 .for_toggle_scan {
-    @media ($breakpoint_LG) {
+    @media ($breakpoint_XL) {
         display: flex;
         gap: 10px;
     }
@@ -69,12 +82,12 @@
             width: 54px;
             display: none;
 
-            @media ($breakpoint_LG) {
+            @media ($breakpoint_XL) {
                 display: block;
             }
         }
 
-        @media($breakpoint_LG) {
+        @media($breakpoint_XL) {
             display: flex;
 
         }
@@ -102,6 +115,39 @@
         align-items: center;
         justify-content: space-between;
 
+        .link-copy {
+
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+
+
+            input {
+                font-size: 14px;
+                margin-bottom: 0px;
+                padding: 10px;
+                border-radius: 5px 0 0 5px;
+                width: 300px;
+                border: 1px solid var(--border-color);
+                background: var(--bodybg);
+
+
+            }
+
+            .icon-copy {
+                background: var(--sky-blue);
+                padding: 5px 11px;
+                border: 1px solid var(--border-color);
+                border-radius: 0 5px 5px 0;
+                border-left: none;
+
+                svg {
+                    font-size: 32px;
+                    color: var(--txt-white);
+                }
+            }
+        }
+
         @media ($breakpoint_MD) {
             display: none;
         }
@@ -115,13 +161,21 @@
             // width: 80%;
             border: none;
             margin-right: 10px;
+
+            span {
+                svg {
+                    color: var(--sky-blue);
+                }
+            }
         }
 
         .scan_code {
             width: 38px;
-            border: 1px solid var(--primary-color);
+            border: 1px solid var(--sky-blue);
             border-radius: 5px;
         }
+
+
 
         .icons_im {
             display: flex;
@@ -170,6 +224,8 @@
     transition: 0.5s;
     z-index: 12;
     overflow: auto;
+    border-radius: 0px !important;
+    border: 0px !important;
 
     @media($breakpoint_ESM) {
         width: 260px;
@@ -181,7 +237,23 @@
 
             .sidebar_menu {
                 margin-bottom: 0;
-                padding: 12px 0;
+                padding: 0;
+
+                .logo_sec {
+                    text-align: center;
+
+                    .sidebar_logo {
+                        text-align: center;
+
+                        img {
+                            width: 70px !important;
+                            margin-bottom: 10px;
+                        }
+
+
+                    }
+                }
+
 
                 .accordion {
                     .accordion-item {
@@ -275,10 +347,12 @@
                                         border-radius: 4px;
                                         font-weight: 500;
                                         opacity: .7;
+                                        text-decoration: none;
+                                        margin-left: 27px;
 
                                         &:hover {
                                             // background-color: var(--sidebar-hover);
-                                            color: var(--primary-color);
+                                            color: var(--sky-blue);
 
                                         }
                                     }
@@ -307,6 +381,24 @@
         svg {
             fill: var(--txt-black);
         }
+    }
+
+}
+
+.react-responsive-modal-modal {
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+
+    .scan_modal {
+        width: 150px;
+
+        border-radius: 5px;
+    }
+}
+
+.react-responsive-modal-closeButton {
+    svg {
+        display: none !important;
     }
 
 }

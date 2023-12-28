@@ -1,0 +1,56 @@
+.trading-section {
+  margin-top: 30px;
+
+  .trading-outer {
+    padding: 20px;
+    background-color: var(--txt-white);
+    border-radius: 10px;
+
+    .trading-head {
+      padding: 15px;
+
+      border-radius: 7px;
+      position: relative;
+      z-index: 1;
+      background: var(--light-blue);
+
+
+      &::after {
+        position: absolute;
+        z-index: -1;
+        content: "";
+        background-image: url("../Image/tradingh2.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-position: right;
+        border-radius: 7px;
+
+        @media ($breakpoint_SM) {
+          background-image: none;
+        }
+      }
+
+      h4 {
+
+        font-weight: 500;
+        color: var(--primary-color);
+
+        margin: 0;
+
+        @media ($breakpoint_MD) {
+          font-size: 25px;
+        }
+
+        @media ($breakpoint_SM) {
+          font-size: 20px;
+        }
+      }
+    }
+
+    @include table_styles;
+  }
+}

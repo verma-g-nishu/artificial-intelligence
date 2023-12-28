@@ -1,0 +1,65 @@
+.presentation_main {
+    margin-top: 30px;
+
+    .present_top_sec {
+        h4 {
+            background: var(--light-blue);
+            padding: 15px;
+            border-radius: 10px;
+            color: var(--primary-color);
+        }
+    }
+
+    .present_inner {
+        .present_row {
+            margin-top: 30px;
+
+            .present_card {
+                border: none;
+                box-shadow: var(--box-shadow);
+                position: relative;
+                z-index: 1;
+                margin-bottom: 25px;
+
+                .card-body {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .image_logo {
+                        align-self: center;
+
+                        img {
+                            width: 100%;
+                            background: var(--txt-white);
+                            padding: 10px;
+                            border-radius: 10px;
+                            box-shadow: var(--box-shadow);
+                        }
+
+                        .down_icon {
+
+                            position: absolute;
+                            left: 10px;
+                            top: 10px;
+                            background-color: var(--primary-color);
+                            border-radius: 50%;
+                            font-size: 34px;
+                            padding: 5px;
+                            color: var(--txt-white);
+
+                        }
+                    }
+
+                    .country_sec {
+                        padding: 0px 20px;
+
+                        h6 {
+                            color: var(--sky-blue);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { logo } from '../config/Config'
 import Accordion from 'react-bootstrap/Accordion';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AccountBalanceWallet, AutoStories, CardGiftcard, Dashboard, Description, Groups, Help, Key, Logout, MonetizationOn, Payment, PersonOutline, ShoppingBasket, ViewCompact } from '@mui/icons-material';
+import _fetch from '../config/api';
+
 
 const Sidebar = () => {
   let location = useLocation();
@@ -12,36 +14,39 @@ const Sidebar = () => {
     setShowSubmenu(!showSubmenu);
   };
 
+  const navigate = useNavigate();
+
 
   return (
     <>
 
       <div className="app-sidebar">
-        <div className="app-sidebar__logo">
-          <a className="header-brand" href="index.html">
-            <img src={logo} className="header-brand-img" alt="Covido logo" />
-          </a>
-        </div>
+
         <div className="app-sidebar3">
           <div className="sidebar">
+            <div className="app-sidebar__logo">
+              <a className="header-brand" href="/dashboard">
+                <img src={logo} className="header-brand-img" alt="Covido logo" />
+              </a>
+            </div>
             <ul className="sidebar_menu">
 
               <Accordion defaultActiveKey="0" flush>
                 <Accordion.Item eventKey="0">
                   <Accordion.Header className='only_button'>
-                    <Link to="/dashboard" className={location.pathname === '/' ? "drop_link active_Link" : ' drop_ink'}><Dashboard />Dashboard</Link>
+                    <Link to="/dashboard" className={location.pathname === '/dashboard' ? "drop_link active_Link" : ' drop_ink'}><Dashboard />Dashboard</Link>
                   </Accordion.Header>
                 </Accordion.Item>
 
                 <Accordion.Item eventKey="1">
                   <Accordion.Header className='only_button'>
-                    <Link to="/profile" className={location.pathname === '/Profile' ? "drop_link active_Link" : ' drop_ink'}><PersonOutline />Profile</Link>
+                    <Link to="/profile" className={location.pathname === '/profile' ? "drop_link active_Link" : ' drop_ink'}><PersonOutline />Profile</Link>
                   </Accordion.Header>
                 </Accordion.Item>
 
                 <Accordion.Item eventKey="2">
                   <Accordion.Header className='only_button'>
-                    <Link to="/" className={location.pathname === '/Deposit' ? "drop_link active_Link" : ' drop_ink'}><MonetizationOn />Deposit</Link>
+                    <Link to="/deposit" className={location.pathname === '/deposit' ? "drop_link active_Link" : ' drop_ink'}><MonetizationOn />Deposit</Link>
                   </Accordion.Header>
                 </Accordion.Item>
 
@@ -49,9 +54,9 @@ const Sidebar = () => {
                   <Accordion.Header><span><ShoppingBasket />Infrastructure</span></Accordion.Header>
                   <Accordion.Body>
                     <ul>
-                      <li><a>Buy Infra</a></li>
-                      <li><a>Trading Profit</a></li>
-                      <li><a>Buy History</a></li>
+                      <li><a href='/buy-infra'> Buy Infra</a></li>
+                      <li><a href="/trading-profit">Trading Profit</a></li>
+                      <li><a>Ticket View</a></li>
                     </ul>
                   </Accordion.Body>
                 </Accordion.Item>
@@ -59,13 +64,13 @@ const Sidebar = () => {
 
                 <Accordion.Item eventKey="4">
                   <Accordion.Header className='only_button'>
-                    <Link to="/" className={location.pathname === '/Team' ? "drop_link active_Link" : ' drop_ink'}><Groups />Team</Link>
+                    <Link to="/team" className={location.pathname === '/team' ? "drop_link active_Link" : ' drop_ink'}><Groups />Team</Link>
                   </Accordion.Header>
                 </Accordion.Item>
 
                 <Accordion.Item eventKey="5">
                   <Accordion.Header className='only_button'>
-                    <Link to="/" className={location.pathname === '/Overview' ? "drop_link active_Link" : ' drop_ink'}><ViewCompact />Overview</Link>
+                    <Link to="/overview" className={location.pathname === '/overview' ? "drop_link active_Link" : ' drop_ink'}><ViewCompact />Overview</Link>
                   </Accordion.Header>
                 </Accordion.Item>
 
@@ -73,10 +78,10 @@ const Sidebar = () => {
                   <Accordion.Header><span><AccountBalanceWallet />Income</span></Accordion.Header>
                   <Accordion.Body>
                     <ul>
-                      <li><a>Uni-Level</a></li>
-                      <li><a>Rank Royalty</a></li>
-                      <li><a>Global Lifetime Pool</a></li>
-                      <li><a>Cashflow</a></li>
+                      <li><a href='/uni-level'>Uni-Level</a></li>
+                      <li><a href='/rankroyalty'>Rank Royalty</a></li>
+                      <li><a href='/globalpool'>Global Lifetime Pool</a></li>
+                      <li><a href='/cashflow'>Cashflow</a></li>
 
                     </ul>
                   </Accordion.Body>
@@ -84,11 +89,11 @@ const Sidebar = () => {
 
                 <Accordion.Item eventKey="7">
                   <Accordion.Header className='only_button'>
-                    <Link to="/" className={location.pathname === '/Ledger' ? "drop_link active_Link" : ' drop_ink'}><Description />Ledger</Link>
+                    <Link to="/ledger" className={location.pathname === '/ledger' ? "drop_link active_Link" : ' drop_ink'}><Description />Ledger</Link>
                   </Accordion.Header>
                 </Accordion.Item>
 
-                <Accordion.Item eventKey="8">
+                {/* <Accordion.Item eventKey="8">
                   <Accordion.Header><span><CardGiftcard />Promotions</span></Accordion.Header>
                   <Accordion.Body>
                     <ul>
@@ -97,20 +102,20 @@ const Sidebar = () => {
 
                     </ul>
                   </Accordion.Body>
-                </Accordion.Item>
+                </Accordion.Item> */}
 
-                <Accordion.Item eventKey="9">
+                {/* <Accordion.Item eventKey="9">
                   <Accordion.Header className='only_button'>
                     <Link to="/" className={location.pathname === '/Cryptic' ? "drop_link active_Link" : ' drop_ink'}><Key />Cryptic ID</Link>
                   </Accordion.Header>
-                </Accordion.Item>
+                </Accordion.Item> */}
 
                 <Accordion.Item eventKey="10">
                   <Accordion.Header><span><Payment />Payout</span></Accordion.Header>
                   <Accordion.Body>
                     <ul>
                       <li><a>Request</a></li>
-                      <li><a>History</a></li>
+                      <li><a href='/pay-history'>History</a></li>
 
                     </ul>
                   </Accordion.Body>
@@ -118,19 +123,19 @@ const Sidebar = () => {
 
                 <Accordion.Item eventKey="11">
                   <Accordion.Header className='only_button'>
-                    <Link to="/" className={location.pathname === '/Presentations' ? "drop_link active_Link" : ' drop_ink'}><AutoStories />Presentations</Link>
+                    <Link to="/presentations" className={location.pathname === '/presentations' ? "drop_link active_Link" : ' drop_ink'}><AutoStories />Presentations</Link>
                   </Accordion.Header>
                 </Accordion.Item>
 
                 <Accordion.Item eventKey="12">
                   <Accordion.Header className='only_button'>
-                    <Link to="/" className={location.pathname === '/Support' ? "drop_link active_Link" : ' drop_ink'}><Help />Support</Link>
+                    <Link to="/support" className={location.pathname === '/support' ? "drop_link active_Link" : ' drop_ink'}><Help />Support</Link>
                   </Accordion.Header>
                 </Accordion.Item>
 
                 <Accordion.Item eventKey="12">
                   <Accordion.Header className='only_button'>
-                    <Link to="/" className={location.pathname === '/logout' ? "drop_link active_Link" : ' drop_ink'}><Logout />Log out</Link>
+                    <Link to="/" className={location.pathname === '/logout' ? "drop_link active_Link" : ' drop_ink'} ><Logout />Log out</Link>
                   </Accordion.Header>
                 </Accordion.Item>
 

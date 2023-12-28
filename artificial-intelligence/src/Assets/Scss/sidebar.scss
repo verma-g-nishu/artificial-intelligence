@@ -1,11 +1,11 @@
 .app-sidebar {
     position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
+    top: 19px;
+    bottom: 100px;
+    left: 15px;
     color: #8a98ac;
     width: 280px;
-    height: 100%;
+    height: 94vh;
     z-index: 11;
     background: var(--sidebar-bg);
     -webkit-box-shadow: 0px 22px 0 21px #f1f4fb;
@@ -15,10 +15,10 @@
     -o-transition: left 0.3s ease, width 0.3s ease;
     transition: left 0.3s ease, width 0.3s ease;
     border-right: 0;
-    border-top-right-radius: 70px;
-    overflow-y: auto;
-   
-    @media($breakpoint_LG){
+    border-radius: 10px;
+
+
+    @media($breakpoint_XL) {
         display: none;
     }
 
@@ -27,13 +27,14 @@
         border-bottom: 1px solid var(--border-color);
         text-align: center;
         width: 280px;
-        top: 0;
-        left: 0;
-        right: 0;
-        position: fixed;
-        z-index: 999;
+        border-radius: 10px 10px 0px 0px;
+        // top: 0;
+        // left: 0;
+        // right: 0;
+        // position: fixed;
+        // z-index: 999;
         background: var(--sidebar-bg);
-        border-top-right-radius: 70px;
+
         -webkit-transition: left 0.3s ease, width 0.3s ease;
         -o-transition: left 0.3s ease, width 0.3s ease;
         transition: left 0.3s ease, width 0.3s ease;
@@ -45,20 +46,22 @@
                 height: 40px;
                 vertical-align: bottom;
                 margin-right: 0;
-                width: auto
+                width: auto;
             }
         }
     }
 
     .app-sidebar3 {
-        padding-top: 50px;
+        // padding-top: 50px;
 
         .sidebar {
-            padding: 15px 0px 15px 15px;
+
 
             .sidebar_menu {
                 margin-bottom: 0;
-                padding: 12px 0;
+                padding: 15px 0px 15px 15px;
+                height: 80vh;
+                overflow-y: scroll !important;
 
                 .accordion {
                     .accordion-item {
@@ -84,12 +87,16 @@
                                     font-weight: 500;
 
                                     svg {
-                                        color: var(--txt-black);
+                                        color: var(--primary-color);
+
+
                                         font-size: 20px;
+
+
                                     }
                                 }
 
-                                .drop_link{
+                                .drop_link {
                                     display: flex;
                                     align-items: center;
                                     gap: 10px;
@@ -106,18 +113,19 @@
                                     }
                                 }
 
-                                .active_Link{
+                                .active_Link {
                                     background-color: var(--primary-color);
                                     border-radius: 50px 0px 0px 50px;
                                 }
 
-                                &:hover{
-                                    background-color: var(--sidebar-hover);
+                                &:hover {
+                                    background-color: var(--light-blue);
                                     border-radius: 50px 0px 0px 50px;
                                 }
 
                                 &::after {
-                                   margin-right: 15px;
+                                    margin-right: 15px;
+                                    color: var(--sky-blue);
                                 }
                             }
                         }
@@ -140,9 +148,10 @@
                                 list-style: none;
 
                                 li {
-                                    margin: 5px 0px;
+                                    margin: 5px 0px 5px 25px;
 
                                     a {
+                                        text-decoration: none;
                                         background-color: transparent;
                                         width: 100%;
                                         display: flex;
@@ -155,8 +164,8 @@
 
                                         &:hover {
                                             // background-color: var(--sidebar-hover);
-                                            color: var(--primary-color);
-                                            
+                                            color: var(--sky-blue);
+
                                         }
                                     }
 
@@ -169,5 +178,10 @@
         }
     }
 
+
+}
+
+.react-responsive-modal-modal {
+    padding: 0px !important;
 
 }

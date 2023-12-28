@@ -12,12 +12,15 @@
     //harpreet
     --btn-hover: #404eb1;
     --link-bg: #1f1f2163;
+    --btn-bgh:#ebebeb;
 
     //nishu
     --light-blue: #31bafd1f;
     --border-color: #d1d1d263;
     --txt-light: #9d9d9d;
     --sky-blue: #31bafd;
+    --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --gradient: linear-gradient(to right, #2b3892 60%, #31bafd);
 }
 
 
@@ -35,10 +38,13 @@ body[data-theme='light'] {
     //harpreet
     --btn-hover: #404eb1;
     --link-bg: #1f1f2163;
+    --btn-bgh:#e0e0e0;
 
     //nishu
     --light-blue: #31bafd1f;
     --border-color: #d1d1d263;
     --txt-light: #9d9d9d;
     --sky-blue: #31bafd;
+    --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --gradient: linear-gradient(to right, #2b3892 60%, #31bafd);
 }

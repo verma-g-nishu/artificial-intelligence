@@ -1,13 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import dollar_image from '../../Assets/Image/dollar_image.png';
-import gic_banner from '../../Assets/Image/gic_banner.png';
+
 import NorthIcon from '@mui/icons-material/North';
 import SouthIcon from '@mui/icons-material/South';
-import { Doughnut } from 'react-chartjs-2';
-import banner_earn from '../../Assets/Image/banner_earn.webp';
+
 import ProgressBar from 'react-bootstrap/ProgressBar';
-import scan_code from '../../Assets/Image/scan_code.png';
-import profit_im from '../../Assets/Image/profit_im.png';
+
 import profit3 from '../../Assets/Image/profit3.png';
 import profit4 from '../../Assets/Image/profit4.png';
 import profit5 from '../../Assets/Image/profit5.png';
@@ -25,14 +23,28 @@ import wallet from '../../Assets/Image/wallet.png';
 import hour24 from '../../Assets/Image/hour24.png';
 import { titleDescription } from '../../config/Config';
 import { Chart } from "react-google-charts";
-// import ApexCharts from "apexcharts";
 import Table from 'react-bootstrap/Table';
-
+import banner from '../../Assets/Image/banner.png';
+import _fetch from '../../config/api';
+import { useLocation, useNavigate } from 'react-router-dom';
+// import QRCode from 'qrcode.react';
+import scan_code from '../../Assets/Image/scan_code.png';
+import 'react-responsive-modal/styles.css';
+import Modal from 'react-responsive-modal';
 const Dashboard = (props: any) => {
 
   useEffect(() => {
     document.title = `${props.pageTitle} | ${titleDescription}`;
-  })
+  });
+  const [sponsorId, setSponsorId] = useState('');
+  const [open, setOpen] = useState(false);
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
+
+  let location = useLocation();
+  const navigate = useNavigate();
+  const auth = localStorage.getItem('auth');
+
 
   const data1 = [
     ["Task", "Hours per Day"],
@@ -60,14 +72,42 @@ const Dashboard = (props: any) => {
   };
 
   const now = 60;
+
+  // const [info, setInfo] = useState([]);
+  // useEffect(() => {
+  //   getUserInfo();
+  // }, []);
+
+  // const getUserInfo = async () => {
+  //   let res = await _fetch(`${api_url}user/userInfo/`, "GET", {})
+  //   if (res?.status === 'success') {
+  //     setInfo(res?.data?.data);
+  //   }
+  // }
+
   return (
     <>
       <main>
         <div>
           <div className="coustom_container">
             <div className="main_inner_sec">
+              <div className="header-left">
+                <div className="link-copy ">
+                  <input type='text' value="" disabled></input>
+                  <div className="icon-copy">
+                    <FileCopyIcon />
+                  </div>
+                </div>
+                <div className="icons_im">
+                  <img src={scan_code} className="scan_code" alt="scan" onClick={onOpenModal} />
+
+
+
+
+                </div>
+              </div>
               <div className="banner-section-top">
-                <img src={banner_earn} className="banner-img" alt="Covido logo" />
+                <img src={banner} className="banner-img" alt="Covido logo" />
               </div>
 
               {/* second section */}
@@ -376,12 +416,13 @@ const Dashboard = (props: any) => {
                   <div className="col-lg-6">
                     <div className="card scan_card">
                       <div className="card-body">
-                        <input type='text' value="https://web.gtccapital.com/auth/signup/" disabled></input>
-                        <div className="icons_im">
-                          <img src={scan_code} className="scan_code" alt="scan" />
-
-                          <FileCopyIcon />
+                        <div className="link-copy ">
+                          <input type='text' value="https://web.gtccapital.com/auth/signup/" disabled></input>
+                          <div className="icon-copy">
+                            <FileCopyIcon />
+                          </div>
                         </div>
+
 
                       </div>
                     </div>
@@ -561,7 +602,8 @@ const Dashboard = (props: any) => {
 
                     </Table>
                   </div>
-                </div></div>
+                </div>
+              </div>
 
             </div>
           </div>

@@ -1,0 +1,236 @@
+.team-section {
+  margin-top: 30px;
+
+  .team-outer {
+    padding: 20px;
+    background-color: var(--txt-white);
+    border-radius: 10px;
+
+    .team-inner {
+      .team_row {
+        position: relative;
+        z-index: 1;
+        padding: 10px;
+        margin: 0;
+
+        &::after {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          left: 0;
+          top: 0;
+          background-image: url("../Image/bg_team1.png");
+          z-index: -1;
+          background-size: cover;
+          border-radius: 10px;
+
+          background-position: center;
+
+        }
+
+        .team_col {
+          @media ($breakpoint_SM) {
+            padding: 0px 10px;
+          }
+
+        }
+
+      }
+
+      //   padding: 20px;
+      .team-sponser {
+
+        border-radius: 7px;
+        //  padding: 20px;
+
+        .sponser-head {
+
+
+          padding: 10px;
+          border-radius: 7px 7px 0 0;
+          color: var(--primary-color);
+
+          h6 {
+            margin: 0;
+            font-weight: 600;
+          }
+        }
+
+        .sponser-content {
+          // padding: 15px;
+
+          p {
+            font-size: 15px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-radius: 10px;
+            padding: 10px;
+            background: var(--sky-blue);
+            margin-bottom: 5px;
+
+            color: var(--txt-white);
+
+            svg {
+              font-size: 23px;
+              color: var(--primary-color);
+              transition: all 0.4s linear;
+
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+      }
+
+      .team-head-content {
+
+
+        // &::after {
+        //     position: absolute;
+        //     content: '';
+        //     z-index: -1;
+        //     background-image: url("../Image/waveh701.svg");
+        //     background-size: cover;
+        //     background-repeat: no-repeat;
+        //     width: 100%;
+        //     height: 100%;
+        //     top: 0;
+        //     right: 0;
+        //     filter: drop-shadow(2px 4px 6px black);
+        // }
+        @media ($breakpoint_XXL) {
+          flex-direction: column;
+          align-items: normal;
+          justify-content: center;
+          gap: 10px;
+        }
+
+        @media ($breakpoint_LG) {
+          flex-direction: column-reverse;
+          margin-top: 10px;
+        }
+
+        .team-tabs {
+
+          .react-tabs__tab-list {
+            border: none;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin: 0;
+
+            @media ($breakpoint_SM) {
+              justify-content: start;
+              padding: 0px;
+            }
+
+            .react-tabs__tab--selected {
+              border: none;
+              background-color: var(--primary-color) !important;
+              color: var(--txt-white) !important;
+              border-radius: 5px;
+              font-size: 16px;
+            }
+
+            .react-tabs__tab {
+              border: none;
+              border-radius: 5px;
+              background-color: var(--sky-blue);
+              font-size: 15px;
+              color: var(--txt-white);
+              padding: 8px 14px;
+
+              @media ($breakpoint_XXXL) {
+                padding: 12px 14px;
+                font-size: 11px;
+              }
+
+            }
+
+            .react-tabs__tab:focus:after {
+              display: none;
+            }
+          }
+        }
+
+        .team-search {
+
+          display: flex;
+          gap: 10px;
+          justify-content: flex-end;
+          margin-bottom: 30px;
+
+
+
+          @media ($breakpoint_SM) {
+            flex-direction: column;
+          }
+
+          .serch-form {
+            display: flex;
+            gap: 10px;
+
+            @media ($breakpoint_450) {
+              flex-direction: column;
+            }
+
+            .form-control {
+              width: auto !important;
+            }
+
+            #names {
+              padding: 6px 12px;
+              border: 1px solid var(--border-color);
+              font-size: 15px;
+              border-radius: 7px;
+              outline: none;
+              box-shadow: var(--box-shadow);
+
+              @media ($breakpoint_XXXL) {
+                font-size: 14px;
+              }
+            }
+
+            .level {
+              border: 1px solid var(--border-color);
+              font-size: 15px;
+              border-radius: 7px;
+
+              appearance: auto;
+              box-shadow: var(--box-shadow);
+
+              @media ($breakpoint_XXXL) {
+                font-size: 14px;
+              }
+            }
+          }
+
+          .form-btn {
+            display: flex;
+            gap: 10px;
+
+            .searchicons {
+              background-color: var(--sky-blue);
+              color: var(--txt-white);
+              padding: 6px 8px;
+              border: none;
+              outline: none;
+              border-radius: 7px;
+
+            }
+          }
+        }
+      }
+
+      .panel {
+        .react-tabs__tab-panel {
+          @include table_styles;
+        }
+      }
+    }
+  }
+}

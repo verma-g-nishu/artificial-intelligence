@@ -1,0 +1,508 @@
+.profile1-section {
+
+  margin-top: 30px;
+  // border-radius: 10px;
+
+  @media ($breakpoint_MD) {
+    .react-tabs {
+      .row {
+        gap: 20px;
+      }
+    }
+
+  }
+
+  .personal-info {
+    background-color: var(--txt-white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    height: 100%;
+
+
+
+    .my-info {
+      text-align: left;
+      font-size: 18px;
+      font-weight: 500;
+      border-bottom: 1px solid var(--sky-blue);
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+
+      b {
+        // background-color: var(--primary-color);
+        color: var(--primary-color);
+        border-radius: 16px;
+        padding: 8px 16px;
+      }
+    }
+
+    .profile-infos {
+      .name-pic {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background: var(--primary-color);
+        padding: 20px;
+        border-radius: 10px;
+
+        .outer_profile {
+          padding: 10px;
+          border: 1px dashed var(--border-color);
+          border-radius: 50%;
+
+          .left_profile {
+            width: 120px;
+
+            height: 120px;
+            padding: 8px;
+            background: var(--bodybg);
+            border-radius: 50%;
+            position: relative;
+
+
+            .emptyPlaceholder {
+              position: absolute;
+              top: 37px;
+
+              left: 17px;
+
+              h6 {
+                font-size: 12px;
+              }
+
+              svg {
+                width: 25px;
+                fill: var(--txt-light);
+              }
+            }
+          }
+        }
+
+
+        .owner-pic {
+          margin: 10px 0px;
+
+          img {
+            background: var(--light-blue);
+            border-radius: 50%;
+            padding: 7px;
+            width: 82px;
+          }
+        }
+
+        .name-post {
+          h5 {
+            color: var(--txt-white);
+
+            font-weight: 600;
+            margin: 0;
+          }
+
+          h6 {
+            color: var(--txt-light);
+
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      .profile-follow {
+        margin-bottom: 20px;
+        display: flex;
+        gap: 10px;
+
+
+
+        .follows-btn {
+          border: none;
+          background-color: var(--primary-color);
+          color: var(--txt-white);
+          padding: 10px 30px;
+          border-radius: 10px;
+          font-size: 16px;
+        }
+
+        .message-btn {
+          border: 1px solid var(--primary-color);
+          background-color: var(--txt-white);
+          color: var(--txt-black);
+          padding: 10px 30px;
+          border-radius: 10px;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .bio {
+      margin-bottom: 20px;
+      // border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 10px 0;
+
+      b {
+        font-size: 20px;
+        font-weight: 400;
+        color: var(--primary-color);
+
+      }
+
+      p {
+        font-size: 16px;
+        margin: 0;
+        padding: 12px 0;
+        color: var(--txt-light);
+      }
+    }
+
+    .react-tabs__tab-list {
+      border: none;
+
+      .react-tabs__tab {
+        border-right: 3px double transparent;
+        border-left: 3px solid transparent;
+        border-radius: 0px;
+        display: block !important;
+        color: var(--sky-blue);
+      }
+
+      .react-tabs__tab--selected {
+        border-right: 3px double var(--sky-blue);
+        border-left: 3px solid var(--sky-blue);
+        border-top: 0px;
+        border-radius: 0px;
+        border-color: var(--sky-blue);
+        background: var(--bodybg);
+        color: var(--primary-color);
+
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+
+    .contact-info {
+      b {
+        font-size: 20px;
+        font-weight: 400;
+        color: var(--primary-color);
+      }
+
+      .contact-details {
+        margin-top: 20px;
+
+        .emails {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 20px;
+
+          h6 {
+            color: var(--txt-light);
+            font-size: 17px;
+          }
+
+          p {
+            font-size: 16px;
+            margin: 0;
+            color: var(--txt-black);
+          }
+        }
+      }
+    }
+
+
+
+    .foot-info {
+      margin: 45px 0 30px;
+
+      .down-btn {
+        padding: 8px 16px;
+        color: var(--txt-white);
+        background-color: var(--primary-color);
+        border: none;
+        outline: none;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .account1-details {
+    background-color: var(--txt-white);
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    box-shadow: var(--box-shadow);
+
+
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      background-image: url("../Image/wave44.svg");
+      background-position: center;
+      background-size: cover;
+      z-index: -1;
+      border-radius: 10px;
+      opacity: 0.8;
+    }
+
+
+
+    .accout-seting {
+
+      background: var(--txt-white);
+      padding: 20px;
+      border-radius: 10px;
+
+      min-height: 460px;
+
+      .bottom_sec {
+        .form {
+          .form-control {
+            &:focus {
+              box-shadow: none;
+            }
+          }
+
+          #address {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+            background: var(--bodybg);
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      .form {
+        margin-bottom: 20px;
+
+
+
+        .form-label {
+          font-size: 15px;
+        }
+
+        input {
+          background: var(--bodybg);
+          line-height: 2.5;
+          font-size: 14px;
+        }
+      }
+
+      h2 {
+        margin-bottom: 20px;
+        color: var(--primary-color);
+
+      }
+
+      .form-part {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+
+        @media ($breakpoint_MD) {
+          display: block;
+        }
+
+        .form {
+          margin-bottom: 20px;
+
+
+          .form-label {
+            font-size: 15px;
+            // margin-bottom: 0;
+          }
+
+          .form-control {
+            font-size: 14px;
+            width: 100%;
+            line-height: 2.5;
+
+            background: var(--bodybg);
+
+
+          }
+
+          .form-control:focus {
+            box-shadow: none;
+            border: none;
+          }
+        }
+
+
+      }
+
+      .form-part2 {
+        label {
+          margin-bottom: 0.5rem;
+        }
+
+
+
+        #pass {
+          display: block;
+          width: 90%;
+          padding: 0.375rem 0.75rem;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 2.2;
+          color: var(--bs-body-color);
+          background: var(--bodybg);
+          border: var(--bs-border-width) solid var(--bs-border-color);
+          border-radius: var(--bs-border-radius);
+          transition: border-color 0.15s ease-in-out,
+            box-shadow 0.15s ease-in-out;
+
+          &:-webkit-autofill {
+            background-color: var(--txt-white) !important;
+            -webkit-text-fill-color: var(--txt-black);
+            -webkit-box-shadow: 0 0 0px 1000px var(--txt-white) inset;
+          }
+
+          &:focus {
+            box-shadow: 0 0 0px 1000px var(--txt-white) inset;
+          }
+
+          &:focus-visible {
+            outline: none;
+          }
+        }
+
+        .hide-pass {
+          display: flex;
+          align-items: center;
+          position: relative;
+          margin-bottom: 40px;
+
+          button {
+            border: none;
+            font-size: 16px;
+            position: absolute;
+            background: none;
+            right: 80px;
+            top: 13px;
+
+            &:focus {
+              outline: none;
+            }
+
+            svg {
+              font-size: 20px;
+              color: grey;
+            }
+          }
+        }
+      }
+
+      .form-part3 {
+        .authorize {
+          .author-head {
+            background-color: var(--primary-color);
+            padding: 15px 0 15px 15px;
+            color: var(--txt-white);
+            border-radius: 7px 7px 0 0;
+            margin-bottom: 30px;
+
+            h4 {
+              font-size: 16px;
+              margin: 0;
+            }
+          }
+
+          p {
+            font-size: 16px;
+            margin-bottom: 40px;
+          }
+
+          .scan_sec {
+            display: flex;
+            margin-top: 30px;
+
+            .store-pic {
+              align-self: center;
+
+              img {
+                width: 60%;
+              }
+            }
+
+            .link1-copy {
+
+
+              margin-bottom: 15px;
+
+              input {
+                font-size: 14px;
+                margin-bottom: 0px;
+                padding: 10px;
+                border-radius: 5px 0 0 5px;
+                border: 1px solid var(--border-color);
+                width: 85%;
+
+              }
+
+              .icon1-copy {
+                // margin-left: 12px;
+                padding: 5px 11px;
+
+                border-radius: 0 5px 5px 0;
+                border-left: none;
+
+                svg {
+                  font-size: 32px;
+                  margin-left: 10px;
+                  color: var(--sky-blue);
+                }
+              }
+            }
+          }
+
+          .gogle-key {
+            text-align: center;
+          }
+
+
+        }
+      }
+    }
+
+    .account-foot {
+      text-align: end;
+      margin: 55px 0 30px;
+
+      .up-btn {
+        padding: 8px 16px;
+        color: var(--txt-white);
+        background-color: var(--primary-color);
+        border: none;
+        outline: none;
+        border-radius: 8px;
+      }
+    }
+
+    .react-tabs__tab--selected {
+      background-color: var(--primary-color);
+      border: none;
+      color: var(--txt-white);
+    }
+
+
+  }
+}
+
+.react-tabs__tab-list {
+  overflow: hidden;
+}

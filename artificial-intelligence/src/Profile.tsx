@@ -1,9 +1,13 @@
 import { Container, Row } from "react-bootstrap";
-import React from "react";
+import React, { useEffect } from "react";
 import { Col } from "react-bootstrap";
 import ownerimg from "./Assets/Image/oner.webp";
+import { titleDescription } from "./config/Config";
 
-const Profile = () => {
+const Profile = (props: any) => {
+  useEffect(() => {
+    document.title = `${props.pageTitle} | ${titleDescription}`;
+  })
   return (
     <main>
       <div className="profile-section">
@@ -26,7 +30,7 @@ const Profile = () => {
                 <div className="bio">
                   <label className="form-label">Bio</label>
                   <textarea className="form-control" rows={4}>
-                    
+
                   </textarea>
                 </div>
                 <div className="form">
@@ -94,7 +98,7 @@ const Profile = () => {
                     </div>
                   </Col>
                   <Col md={4}>
-                  <div className="form">
+                    <div className="form">
                       <label className="form-label">Company</label>
                       <input
                         className="form-control"
@@ -104,7 +108,7 @@ const Profile = () => {
                     </div>
                   </Col>
                   <Col md={4}>
-                  <div className="form">
+                    <div className="form">
                       <label className="form-label">Username</label>
                       <input
                         className="form-control"
@@ -114,7 +118,7 @@ const Profile = () => {
                     </div>
                   </Col>
                   <Col md={4}>
-                  <div className="form">
+                    <div className="form">
                       <label className="form-label">Email Address</label>
                       <input
                         className="form-control"

@@ -1,0 +1,212 @@
+.overview-section {
+  margin-top: 30px;
+
+  .overview-outer {
+    padding: 20px;
+    background-color: var(--txt-white);
+    border-radius: 10px;
+
+    .overview-head {
+      padding: 20px;
+      border-radius: 7px;
+      position: relative;
+      z-index: 1;
+      background-color: var(--light-blue);
+
+      @media ($breakpoint_SM) {
+        background-image: var(--gradient);
+      }
+
+      &::after {
+        position: absolute;
+        z-index: -1;
+        content: "";
+        background-image: url("../Image/overview303.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        border-radius: 7px;
+        background-position: right;
+
+        @media ($breakpoint_SM) {
+          background-image: none;
+        }
+      }
+
+      h4 {
+        font-weight: 500;
+        color: var(--primary-color);
+        margin: 0;
+
+        @media ($breakpoint_MD) {
+          font-size: 25px;
+        }
+
+        @media ($breakpoint_SM) {
+          font-size: 20px;
+        }
+      }
+    }
+
+    @include table_styles;
+
+    .table-overview {
+      h5 {
+        text-align: center;
+        background: var(--bodybg);
+        padding: 10px;
+        border-radius: 10px;
+        color: var(--primary-color);
+      }
+    }
+
+    .overview-details {
+      padding: 30px 0px 0px 0px;
+
+      .overview-teams {
+        box-shadow: var(--box-shadow);
+        background-color: var(--txt-white);
+        padding: 10px 15px;
+        height: 105px;
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 1;
+
+
+        .overpicview {
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            box-shadow: var(--box-shadow);
+          }
+
+          &::after {
+
+            content: "";
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            left: 24px;
+            top: 20px;
+
+            background-color: var(--primary-color);
+            border-radius: 5px;
+            z-index: -1;
+          }
+        }
+
+        .overviewpic-content {
+          background: var(--light-blue);
+          padding: 10px;
+          border-radius: 10px;
+          display: flex;
+          color: var(--sky-blue);
+          align-items: center;
+          justify-content: space-between;
+          flex-grow: 1;
+          margin-left: 20px;
+
+          h6 {
+            margin: 0;
+          }
+
+          h5 {
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .overview-business {
+      padding: 30px 0px 0px 0px;
+
+      .overview-total {
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        border: 1px solid var(border-color);
+        border-radius: 7px;
+        justify-content: space-between;
+        overflow: hidden;
+
+        .total-buss {
+          padding: 10px;
+          background-color: var(--light-blue);
+          color: var(--primary-color);
+          width: 50%;
+          height: 50px;
+          font-size: 15px;
+          font-weight: 400;
+          display: flex;
+          align-items: center;
+          justify-content: left;
+        }
+
+        .total-dolar {
+          padding: 10px;
+          width: 50%;
+          height: 50px;
+          font-size: 15px;
+          color: var(--txt-black);
+          background-color: var(--light-blue);
+          text-align: right;
+          display: flex;
+          align-items: center;
+          justify-content: end;
+        }
+      }
+
+      .overview-total1 {
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        box-shadow: var(--box-shadow);
+        border-radius: 7px;
+        justify-content: space-between;
+        overflow: hidden;
+
+        .total-buss1 {
+          padding: 10px;
+          background-color: var(--txt-white);
+          color: var(--txt-black);
+          width: 50%;
+          height: 50px;
+          font-size: 13px;
+          font-weight: 400;
+          display: flex;
+          align-items: center;
+          justify-content: left;
+        }
+
+        .total-dolar1 {
+          padding: 10px;
+          width: 50%;
+          height: 50px;
+          font-size: 13px;
+          color: var(--txt-black);
+          background-color: var(--txt-white);
+          text-align: right;
+          font-weight: 400;
+          padding-right: 0;
+          display: flex;
+          align-items: center;
+          justify-content: end;
+
+          span {
+            background-color: var(--sky-blue);
+            border-radius: 20px 0 0 20px;
+            padding: 12px 30px;
+            color: var(--txt-white);
+          }
+        }
+      }
+    }
+  }
+}

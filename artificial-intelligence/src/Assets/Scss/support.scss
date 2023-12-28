@@ -1,0 +1,152 @@
+.support_main {
+    margin-top: 30px;
+
+    .support_inner {
+        padding: 20px;
+        background: var(--txt-white);
+        border-radius: 10px;
+
+        .send_sec {
+            text-align: center;
+
+            .send {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+
+        }
+
+
+        .top_head_sec {
+
+
+            h4 {
+
+                color: var(--primary-color);
+                padding: 15px;
+                background: var(--light-blue);
+                border-radius: 10px;
+
+
+            }
+
+
+
+
+        }
+
+        .support-section {
+            margin-top: 30px;
+
+            .desc {
+                .text_sec {
+                    width: 100%;
+                    border: 1px solid var(--border-color);
+                    border-radius: 10px;
+                    padding: 10px;
+
+                    &:focus-visible {
+                        outline: none;
+                    }
+                }
+            }
+
+            .form-select {
+                padding: 10px;
+
+                &:focus {
+                    box-shadow: none;
+
+
+                }
+
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+
+        }
+
+        .support_row {
+            flex-direction: row-reverse;
+
+            .right_sec_support {
+                padding: 20px;
+                text-align: center;
+
+
+                h4 {
+                    padding-bottom: 20px;
+                }
+
+                p {
+                    background: var(--bodybg);
+                    border-radius: 10px;
+                    padding: 10px;
+                    color: var(--sky-blue);
+                }
+
+                .question {
+                    width: 54px;
+                }
+            }
+
+            .upload_document {
+
+
+                padding: 20px 0px;
+                text-align: center;
+
+                .main {
+                    display: flex;
+                    justify-content: center;
+                    padding: 0px 15px;
+                    flex-wrap: wrap;
+                    gap: 40px;
+                    background: var((--txt-white));
+                    box-shadow: var(--box-shadow);
+                    border-radius: 10px;
+
+                    @media($breakpoint_LG) {
+                        gap: 20px;
+                        justify-content: center;
+                    }
+
+                    p {
+                        margin: 0px;
+                    }
+
+                    .upload-input {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        margin: 20px 0;
+                        align-items: center;
+
+                        .browse {
+                            background: transparent;
+                            border: 1px solid var(--sky-blue);
+                            color: var(--primary-color);
+                            cursor: pointer;
+
+                        }
+
+                        img {
+
+                            width: 200px;
+
+
+                            border-radius: 15px;
+                            cursor: pointer;
+                        }
+
+
+                    }
+
+
+                }
+            }
+        }
+
+    }
+}
